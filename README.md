@@ -13,8 +13,10 @@ This system is a sofware project that the developers' professor in Business Proc
 
 <strong>Development Softwares and Programming Languages Used</strong>
 <ul>
-<li>Microsoft Visual Studio 2017</li>
-<li>WampServer v3.0.1</li>
-<li>Visual Basic (VB)</li>
-<li>Structured Query Language (SQL)</li>
+  <li>Microsoft Visual Studio 2017</li>
+  <li>Microsoft Office Visio 2016</li>
+  <li>Microsoft Office Project 2016</li>
+  <li>WampServer v3.0.1</li>
+  <li>Visual Basic (VB)</li>
+  <li>Structured Query Language (SQL)</li>
 </ul>
