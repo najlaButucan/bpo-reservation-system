@@ -9,7 +9,7 @@
 <br/>
 <p align="justify">The developers of this software is currently taking up Computer Science course as third and fourth year students. Their main goal is to digitalize the school's current room reservation system. The software development team are currently having 10 members and are working together to create a user friendly and a functional system software.</p>
 
-<p align="justify">This system is a sofware project that the developers' professor in Business Process Outsourcing (BPO) subject has required them to create and should be submitted before midterms.</p>
+<p align="justify">This system is a software project that the developers' professor in Business Process Outsourcing (BPO) subject has required them to create and should be submitted before finals.</p>
 
 <strong>Development Softwares and Programming Languages Used</strong>
 <ul>
