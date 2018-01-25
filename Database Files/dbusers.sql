@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2018 at 01:00 PM
+-- Generation Time: Jan 25, 2018 at 06:19 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -34,6 +34,14 @@ CREATE TABLE `tbusers` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `tbusers`
+--
+
+INSERT INTO `tbusers` (`UserID`, `Username`, `Password`, `Level`) VALUES
+(1, 'Admin', 'admin', 'ADMIN'),
+(2, 'User', 'user', 'USER');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -51,7 +59,7 @@ ALTER TABLE `tbusers`
 -- AUTO_INCREMENT for table `tbusers`
 --
 ALTER TABLE `tbusers`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

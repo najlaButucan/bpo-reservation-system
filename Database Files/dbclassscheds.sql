@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2018 at 01:00 PM
+-- Generation Time: Jan 25, 2018 at 06:19 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -23,25 +23,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbclass`
+-- Table structure for table `tbclassscheds`
 --
 
-CREATE TABLE `tbclass` (
+CREATE TABLE `tbclassscheds` (
   `ClassID` int(11) NOT NULL,
-  `ClassCode` varchar(20) NOT NULL,
-  `StartTime` timestamp NOT NULL,
-  `EndTime` timestamp NOT NULL,
-  `Cycle` varchar(10) NOT NULL COMMENT 'Delimiter: '','' (NO SPACING)'
+  `ClassCode` varchar(30) NOT NULL,
+  `TimeIn` time NOT NULL,
+  `TimeOut` time NOT NULL,
+  `Cycle` varchar(20) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbclassscheds`
+--
+
+INSERT INTO `tbclassscheds` (`ClassID`, `ClassCode`, `TimeIn`, `TimeOut`, `Cycle`) VALUES
+(1, 'CS323', '09:30:00', '11:30:00', 'M,W,F'),
+(2, 'CS428', '07:30:00', '10:30:00', 'T,Th');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `tbclass`
+-- Indexes for table `tbclassscheds`
 --
-ALTER TABLE `tbclass`
+ALTER TABLE `tbclassscheds`
   ADD PRIMARY KEY (`ClassID`);
 
 --
@@ -49,10 +57,10 @@ ALTER TABLE `tbclass`
 --
 
 --
--- AUTO_INCREMENT for table `tbclass`
+-- AUTO_INCREMENT for table `tbclassscheds`
 --
-ALTER TABLE `tbclass`
-  MODIFY `ClassID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tbclassscheds`
+  MODIFY `ClassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
