@@ -1,5 +1,4 @@
 # BPO Room Reservation System
-# Test Line
 <img src="https://github.com/najlaButucan/bpo-reservation-system/blob/master/reserve-icon_rnd1.png" align="right" width="150px" height="150px" /> 
 
 <strong>About the Software</strong>
