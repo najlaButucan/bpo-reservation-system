@@ -22,6 +22,7 @@
         student_event_form.Close()
         overall_sched_form.Close()
         edit_reservation_form.Close()
+        LOGIN.Show()
     End Sub
 
     Private Sub Time2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Time2.Tick
