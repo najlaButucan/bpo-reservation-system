@@ -15,7 +15,7 @@
     End Sub
 
     Private Sub b_back_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles b_back.Click
-        Me.Hide()
+        Me.Close()
         reservation_form.Show()
     End Sub
 End Class
