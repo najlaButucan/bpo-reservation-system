@@ -1,5 +1,4 @@
 # BPO Room Reservation System
-# Test Line
 <img src="https://github.com/najlaButucan/bpo-reservation-system/blob/master/reserve-icon_rnd1.png" align="right" width="150px" height="150px" /> 
 
 <strong>About the Software</strong>
@@ -20,4 +19,9 @@
   <li>WampServer v3.0.1</li>
   <li>Visual Basic (VB)</li>
   <li>Structured Query Language (SQL)</li>
+</ul>
+
+<strong>Collaborative Websites</strong>
+<ul>
+  <li>Github.com</li>
 </ul>
