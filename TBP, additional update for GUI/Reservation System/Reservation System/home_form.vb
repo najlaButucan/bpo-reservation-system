@@ -5,9 +5,7 @@
         edit_reservation_form.Show()
     End Sub
 
-    Private Sub b_ovaerall_sched_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles b_ovaerall_sched.Click
-        Me.Hide()
-        overall_sched_form.Show()
+    Private Sub b_ovaerall_sched_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
     End Sub
 
     Private Sub b_reservation_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles b_reservation.Click
@@ -34,4 +32,8 @@
         about_form.Show()
     End Sub
 
+    Private Sub home_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        overall_sched_form.Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location + New Point(100, 100)
+        overall_sched_form.Show()
+    End Sub
 End Class

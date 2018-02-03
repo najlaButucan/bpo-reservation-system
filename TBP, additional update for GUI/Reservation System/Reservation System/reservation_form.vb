@@ -22,7 +22,7 @@
         reserved_materials_form.Show()
     End Sub
 
-    Private Sub b_ovaerall_sched_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles b_ovaerall_sched.Click
+    Private Sub b_ovaerall_sched_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         overall_sched_form.Show()
         Me.Hide()
     End Sub
