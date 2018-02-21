@@ -51,3 +51,6 @@ C:\Users\Najla\Documents\GitHub\bpo-reservation-system\Reservation System\Reserv
 C:\Users\Najla\Documents\GitHub\bpo-reservation-system\Reservation System\Reservation System\obj\x86\Debug\Reservation_System.Admin_equip.resources
 C:\Users\Najla\Documents\GitHub\bpo-reservation-system\Reservation System\Reservation System\obj\x86\Debug\Reservation_System.Admin_rooms_mod.resources
 C:\Users\Najla\Documents\GitHub\bpo-reservation-system\Reservation System\Reservation System\obj\x86\Debug\Reservation_System.Reports.resources
+C:\Users\Najla\Documents\GitHub\bpo-reservation-system\Reservation System Files\Reservation System Programs\Reservation System_Final\Reservation System\obj\x86\Debug\Reservation System.exe
+C:\Users\Najla\Documents\GitHub\bpo-reservation-system\Reservation System Files\Reservation System Programs\Reservation System_Final\Reservation System\obj\x86\Debug\Reservation System.xml
+C:\Users\Najla\Documents\GitHub\bpo-reservation-system\Reservation System Files\Reservation System Programs\Reservation System_Final\Reservation System\obj\x86\Debug\Reservation System.pdb
