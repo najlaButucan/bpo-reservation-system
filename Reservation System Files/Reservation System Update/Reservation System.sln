@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Reservation System", "Reservation System\Reservation System.vbproj", "{76AE7143-4124-44C1-9A99-72026B9078BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76AE7143-4124-44C1-9A99-72026B9078BD}.Debug|x86.ActiveCfg = Debug|x86
+		{76AE7143-4124-44C1-9A99-72026B9078BD}.Debug|x86.Build.0 = Debug|x86
+		{76AE7143-4124-44C1-9A99-72026B9078BD}.Release|x86.ActiveCfg = Release|x86
+		{76AE7143-4124-44C1-9A99-72026B9078BD}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
