@@ -49,6 +49,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -77,6 +78,12 @@
       <DependentUpon>about_form.vb</DependentUpon>
     </Compile>
     <Compile Include="about_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_about.Designer.vb">
+      <DependentUpon>admin_about.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin_about.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin_home.Designer.vb">
@@ -123,6 +130,36 @@
     </Compile>
     <Compile Include="Admin_add.vb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_edit.Designer.vb">
+      <DependentUpon>Admin_edit.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Admin_edit.vb">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Admin_add_equips.Designer.vb">
+      <DependentUpon>Admin_add_equips.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Admin_add_equips.vb">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Admin_edit_equips.Designer.vb">
+      <DependentUpon>Admin_edit_equips.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Admin_edit_equips.vb">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Continue_form.Designer.vb">
+      <DependentUpon>Continue_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Continue_form.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="home_form.Designer.vb">
@@ -189,6 +226,9 @@
     <EmbeddedResource Include="about_form.resx">
       <DependentUpon>about_form.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="admin_about.resx">
+      <DependentUpon>admin_about.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_home.resx">
       <DependentUpon>Admin_home.vb</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -211,6 +251,21 @@
     <EmbeddedResource Include="Admin_add.resx">
       <DependentUpon>Admin_add.vb</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_edit.resx">
+      <DependentUpon>Admin_edit.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_add_equips.resx">
+      <DependentUpon>Admin_add_equips.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_edit_equips.resx">
+      <DependentUpon>Admin_edit_equips.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Continue_form.resx">
+      <DependentUpon>Continue_form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home_form.resx">
       <DependentUpon>home_form.vb</DependentUpon>
@@ -283,6 +338,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\!!!!.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment-reminders.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

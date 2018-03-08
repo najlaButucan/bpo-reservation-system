@@ -15,7 +15,15 @@ ReservationSystem
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Reservation_System.My.Resources.Resources.____">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Reservation_System.My.Resources.Resources.add">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Reservation_System.My.Resources.Resources.appointment_reminders">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

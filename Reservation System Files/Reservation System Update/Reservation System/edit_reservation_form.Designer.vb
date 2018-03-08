@@ -28,22 +28,20 @@ Partial Class edit_reservation_form
         Me.b_reservation = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.close_label = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.b_edit = New System.Windows.Forms.Button()
-        Me.l_date_show = New System.Windows.Forms.Label()
-        Me.l_time_show = New System.Windows.Forms.Label()
-        Me.l_day_show = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.l_room_number_show = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.b_edit = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.reserved_room_list_view = New System.Windows.Forms.DataGridView()
         Me.t_id_number = New System.Windows.Forms.TextBox()
         Me.b_home = New System.Windows.Forms.Button()
-        Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.reserved_room_list_view, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'b_about
@@ -54,7 +52,7 @@ Partial Class edit_reservation_form
         Me.b_about.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_about.ForeColor = System.Drawing.Color.Transparent
-        Me.b_about.Location = New System.Drawing.Point(11, 481)
+        Me.b_about.Location = New System.Drawing.Point(11, 552)
         Me.b_about.Name = "b_about"
         Me.b_about.Size = New System.Drawing.Size(163, 53)
         Me.b_about.TabIndex = 20
@@ -73,7 +71,7 @@ Partial Class edit_reservation_form
         Me.b_edit_reservation.Name = "b_edit_reservation"
         Me.b_edit_reservation.Size = New System.Drawing.Size(163, 53)
         Me.b_edit_reservation.TabIndex = 19
-        Me.b_edit_reservation.Text = "Edit Reservation"
+        Me.b_edit_reservation.Text = "Delete Reservation"
         Me.b_edit_reservation.UseVisualStyleBackColor = False
         '
         'b_ovaerall_sched
@@ -126,30 +124,27 @@ Partial Class edit_reservation_form
         Me.close_label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.close_label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.close_label.ForeColor = System.Drawing.Color.White
-        Me.close_label.Location = New System.Drawing.Point(859, 5)
+        Me.close_label.Location = New System.Drawing.Point(1101, 6)
         Me.close_label.Name = "close_label"
         Me.close_label.Size = New System.Drawing.Size(30, 32)
         Me.close_label.TabIndex = 15
         Me.close_label.Text = "x"
         '
-        'GroupBox2
+        'GroupBox1
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox2.Controls.Add(Me.b_edit)
-        Me.GroupBox2.Controls.Add(Me.l_date_show)
-        Me.GroupBox2.Controls.Add(Me.l_time_show)
-        Me.GroupBox2.Controls.Add(Me.l_day_show)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.l_room_number_show)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.ForeColor = System.Drawing.Color.DarkGreen
-        Me.GroupBox2.Location = New System.Drawing.Point(659, 52)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(225, 495)
-        Me.GroupBox2.TabIndex = 22
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Information Summary"
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.b_edit)
+        Me.GroupBox1.Controls.Add(Me.ListView1)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.t_id_number)
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.DarkGreen
+        Me.GroupBox1.Location = New System.Drawing.Point(196, 52)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(935, 555)
+        Me.GroupBox1.TabIndex = 21
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Search and Delete Reservation"
         '
         'b_edit
         '
@@ -158,84 +153,72 @@ Partial Class edit_reservation_form
         Me.b_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.b_edit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.b_edit.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.b_edit.ForeColor = System.Drawing.Color.Transparent
-        Me.b_edit.Location = New System.Drawing.Point(39, 437)
+        Me.b_edit.Location = New System.Drawing.Point(755, 52)
         Me.b_edit.Margin = New System.Windows.Forms.Padding(0)
         Me.b_edit.Name = "b_edit"
         Me.b_edit.Size = New System.Drawing.Size(150, 45)
-        Me.b_edit.TabIndex = 7
-        Me.b_edit.Text = "Confirm Edit"
+        Me.b_edit.TabIndex = 3
+        Me.b_edit.Text = "Delete"
         Me.b_edit.UseVisualStyleBackColor = False
         '
-        'l_date_show
+        'ListView1
         '
-        Me.l_date_show.AutoSize = True
-        Me.l_date_show.Location = New System.Drawing.Point(13, 220)
-        Me.l_date_show.Name = "l_date_show"
-        Me.l_date_show.Size = New System.Drawing.Size(95, 19)
-        Me.l_date_show.TabIndex = 6
-        Me.l_date_show.Text = "mm/dd/yy"
+        Me.ListView1.BackColor = System.Drawing.Color.Honeydew
+        Me.ListView1.CheckBoxes = True
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7})
+        Me.ListView1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.GridLines = True
+        Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.ListView1.Location = New System.Drawing.Point(36, 122)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(869, 427)
+        Me.ListView1.TabIndex = 9
+        Me.ListView1.TileSize = New System.Drawing.Size(5, 5)
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
-        'l_time_show
+        'ColumnHeader1
         '
-        Me.l_time_show.AutoSize = True
-        Me.l_time_show.Location = New System.Drawing.Point(13, 196)
-        Me.l_time_show.Name = "l_time_show"
-        Me.l_time_show.Size = New System.Drawing.Size(65, 19)
-        Me.l_time_show.TabIndex = 5
-        Me.l_time_show.Text = "hh:mm"
+        Me.ColumnHeader1.Text = "Room #"
+        Me.ColumnHeader1.Width = 120
         '
-        'l_day_show
+        'ColumnHeader2
         '
-        Me.l_day_show.AutoSize = True
-        Me.l_day_show.Location = New System.Drawing.Point(13, 172)
-        Me.l_day_show.Name = "l_day_show"
-        Me.l_day_show.Size = New System.Drawing.Size(40, 19)
-        Me.l_day_show.TabIndex = 4
-        Me.l_day_show.Text = "day"
+        Me.ColumnHeader2.Text = "Reserved Date"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader2.Width = 130
         '
-        'Label5
+        'ColumnHeader3
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 140)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 19)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Schedule"
+        Me.ColumnHeader3.Text = "IN"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 120
         '
-        'l_room_number_show
+        'ColumnHeader4
         '
-        Me.l_room_number_show.AutoSize = True
-        Me.l_room_number_show.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l_room_number_show.Location = New System.Drawing.Point(77, 60)
-        Me.l_room_number_show.Name = "l_room_number_show"
-        Me.l_room_number_show.Size = New System.Drawing.Size(78, 28)
-        Me.l_room_number_show.TabIndex = 2
-        Me.l_room_number_show.Text = "TT 000"
+        Me.ColumnHeader4.Text = "OUT"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 120
         '
-        'Label4
+        'ColumnHeader5
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(55, 35)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(122, 19)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Room Number"
+        Me.ColumnHeader5.Text = "# of occupants"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader5.Width = 130
         '
-        'GroupBox1
+        'ColumnHeader6
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.reserved_room_list_view)
-        Me.GroupBox1.Controls.Add(Me.t_id_number)
-        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.DarkGreen
-        Me.GroupBox1.Location = New System.Drawing.Point(196, 52)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(457, 495)
-        Me.GroupBox1.TabIndex = 21
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Search & Edit Reservation"
+        Me.ColumnHeader6.Text = "Purpose"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader6.Width = 120
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "Organization"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader7.Width = 120
         '
         'Button1
         '
@@ -245,22 +228,12 @@ Partial Class edit_reservation_form
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.Transparent
-        Me.Button1.Location = New System.Drawing.Point(380, 60)
+        Me.Button1.Location = New System.Drawing.Point(508, 62)
         Me.Button1.Margin = New System.Windows.Forms.Padding(0)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(36, 35)
-        Me.Button1.TabIndex = 8
+        Me.Button1.TabIndex = 2
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'reserved_room_list_view
-        '
-        Me.reserved_room_list_view.BackgroundColor = System.Drawing.Color.Honeydew
-        Me.reserved_room_list_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.reserved_room_list_view.GridColor = System.Drawing.Color.DarkGreen
-        Me.reserved_room_list_view.Location = New System.Drawing.Point(37, 131)
-        Me.reserved_room_list_view.Name = "reserved_room_list_view"
-        Me.reserved_room_list_view.Size = New System.Drawing.Size(383, 326)
-        Me.reserved_room_list_view.TabIndex = 7
         '
         't_id_number
         '
@@ -270,9 +243,8 @@ Partial Class edit_reservation_form
         Me.t_id_number.ForeColor = System.Drawing.Color.DarkGreen
         Me.t_id_number.Location = New System.Drawing.Point(36, 62)
         Me.t_id_number.Name = "t_id_number"
-        Me.t_id_number.Size = New System.Drawing.Size(329, 31)
-        Me.t_id_number.TabIndex = 6
-        Me.t_id_number.Text = "Search..."
+        Me.t_id_number.Size = New System.Drawing.Size(452, 31)
+        Me.t_id_number.TabIndex = 1
         '
         'b_home
         '
@@ -282,7 +254,7 @@ Partial Class edit_reservation_form
         Me.b_home.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_home.ForeColor = System.Drawing.Color.Transparent
-        Me.b_home.Location = New System.Drawing.Point(11, 422)
+        Me.b_home.Location = New System.Drawing.Point(11, 493)
         Me.b_home.Name = "b_home"
         Me.b_home.Size = New System.Drawing.Size(163, 53)
         Me.b_home.TabIndex = 23
@@ -291,13 +263,13 @@ Partial Class edit_reservation_form
         '
         'edit_reservation_form
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Reservation_System.My.Resources.Resources.bg_main_admin1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(896, 553)
+        Me.ClientSize = New System.Drawing.Size(1143, 619)
         Me.Controls.Add(Me.b_home)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.b_about)
         Me.Controls.Add(Me.b_edit_reservation)
@@ -310,16 +282,13 @@ Partial Class edit_reservation_form
         Me.ForeColor = System.Drawing.Color.DarkGreen
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaximumSize = New System.Drawing.Size(896, 553)
-        Me.MinimumSize = New System.Drawing.Size(896, 553)
+        Me.MaximumSize = New System.Drawing.Size(1143, 619)
+        Me.MinimumSize = New System.Drawing.Size(1143, 619)
         Me.Name = "edit_reservation_form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "edit_reservation_form"
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.reserved_room_list_view, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -330,17 +299,17 @@ Partial Class edit_reservation_form
     Friend WithEvents b_reservation As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents close_label As System.Windows.Forms.Label
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents b_edit As System.Windows.Forms.Button
-    Friend WithEvents l_date_show As System.Windows.Forms.Label
-    Friend WithEvents l_time_show As System.Windows.Forms.Label
-    Friend WithEvents l_day_show As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents t_id_number As System.Windows.Forms.TextBox
-    Friend WithEvents reserved_room_list_view As System.Windows.Forms.DataGridView
     Friend WithEvents b_home As System.Windows.Forms.Button
-    Friend WithEvents l_room_number_show As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents b_edit As System.Windows.Forms.Button
 End Class

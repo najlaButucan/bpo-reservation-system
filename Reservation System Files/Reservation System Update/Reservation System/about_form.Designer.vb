@@ -37,11 +37,14 @@ Partial Class about_form
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.b_home = New System.Windows.Forms.Button()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -63,7 +66,7 @@ Partial Class about_form
         Me.close_label.Cursor = System.Windows.Forms.Cursors.Hand
         Me.close_label.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.close_label.ForeColor = System.Drawing.Color.White
-        Me.close_label.Location = New System.Drawing.Point(784, 6)
+        Me.close_label.Location = New System.Drawing.Point(1101, 10)
         Me.close_label.Name = "close_label"
         Me.close_label.Size = New System.Drawing.Size(30, 32)
         Me.close_label.TabIndex = 17
@@ -87,7 +90,7 @@ Partial Class about_form
         Me.GroupBox1.ForeColor = System.Drawing.Color.DarkGreen
         Me.GroupBox1.Location = New System.Drawing.Point(208, 61)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(600, 148)
+        Me.GroupBox1.Size = New System.Drawing.Size(923, 148)
         Me.GroupBox1.TabIndex = 20
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "About the software project"
@@ -96,9 +99,9 @@ Partial Class about_form
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(20, 26)
+        Me.Label2.Location = New System.Drawing.Point(12, 42)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(555, 105)
+        Me.Label2.Size = New System.Drawing.Size(886, 63)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = resources.GetString("Label2.Text")
         '
@@ -109,7 +112,7 @@ Partial Class about_form
         Me.GroupBox2.ForeColor = System.Drawing.Color.DarkGreen
         Me.GroupBox2.Location = New System.Drawing.Point(208, 215)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(600, 224)
+        Me.GroupBox2.Size = New System.Drawing.Size(923, 224)
         Me.GroupBox2.TabIndex = 21
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "About the developers"
@@ -117,10 +120,11 @@ Partial Class about_form
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(20, 25)
+        Me.Label3.Location = New System.Drawing.Point(12, 35)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(563, 189)
+        Me.Label3.Size = New System.Drawing.Size(901, 147)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = resources.GetString("Label3.Text")
         '
@@ -129,9 +133,9 @@ Partial Class about_form
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.ForeColor = System.Drawing.Color.DarkGreen
-        Me.GroupBox3.Location = New System.Drawing.Point(381, 445)
+        Me.GroupBox3.Location = New System.Drawing.Point(456, 445)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(427, 96)
+        Me.GroupBox3.Size = New System.Drawing.Size(356, 162)
         Me.GroupBox3.TabIndex = 22
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contact Us"
@@ -142,9 +146,10 @@ Partial Class about_form
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(19, 31)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(395, 42)
+        Me.Label4.Size = New System.Drawing.Size(322, 105)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Email address:    comcscie_dev_team@gmail.com" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Contact No.   :    (085) 923 756"
+        Me.Label4.Text = "Email address:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "             comcscie_dev_team@gmail.com" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Contact No.   :" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    " & _
+    "        (085) 923 756"
         '
         'GroupBox4
         '
@@ -153,20 +158,20 @@ Partial Class about_form
         Me.GroupBox4.ForeColor = System.Drawing.Color.DarkGreen
         Me.GroupBox4.Location = New System.Drawing.Point(208, 445)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(167, 96)
+        Me.GroupBox4.Size = New System.Drawing.Size(242, 162)
         Me.GroupBox4.TabIndex = 23
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Software Used"
+        Me.GroupBox4.Text = "Software and PL"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(17, 33)
+        Me.Label5.Location = New System.Drawing.Point(17, 26)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(134, 42)
+        Me.Label5.Size = New System.Drawing.Size(210, 126)
         Me.Label5.TabIndex = 24
-        Me.Label5.Text = "MS Visual Studio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PL: Visual Basic" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label5.Text = "MS Visual Studio" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WAMP Server" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Programming Languages:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Visual Basic" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "MySQL" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label6
         '
@@ -200,12 +205,34 @@ Partial Class about_form
         Me.b_home.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_home.ForeColor = System.Drawing.Color.Transparent
-        Me.b_home.Location = New System.Drawing.Point(15, 484)
+        Me.b_home.Location = New System.Drawing.Point(20, 550)
         Me.b_home.Name = "b_home"
         Me.b_home.Size = New System.Drawing.Size(163, 53)
         Me.b_home.TabIndex = 26
         Me.b_home.Text = "Home"
         Me.b_home.UseVisualStyleBackColor = False
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox5.Controls.Add(Me.Label8)
+        Me.GroupBox5.ForeColor = System.Drawing.Color.DarkGreen
+        Me.GroupBox5.Location = New System.Drawing.Point(818, 445)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(313, 162)
+        Me.GroupBox5.TabIndex = 27
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Credits"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(18, 31)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(168, 105)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "Mr. Anthony Yollach" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "GitHub" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Microsoft Inc." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'about_form
         '
@@ -213,11 +240,12 @@ Partial Class about_form
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Reservation_System.My.Resources.Resources.bg_main_admin2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(820, 553)
+        Me.ClientSize = New System.Drawing.Size(1143, 619)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.b_home)
+        Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -228,8 +256,8 @@ Partial Class about_form
         Me.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaximumSize = New System.Drawing.Size(820, 553)
-        Me.MinimumSize = New System.Drawing.Size(820, 553)
+        Me.MaximumSize = New System.Drawing.Size(1143, 619)
+        Me.MinimumSize = New System.Drawing.Size(1143, 619)
         Me.Name = "about_form"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "about_form"
@@ -242,6 +270,8 @@ Partial Class about_form
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -260,4 +290,6 @@ Partial Class about_form
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents b_home As System.Windows.Forms.Button
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

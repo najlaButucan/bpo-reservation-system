@@ -81,9 +81,11 @@ Partial Class overall_sched_form
         Me.Sunday1 = New System.Windows.Forms.Button()
         Me.Sunday = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lstNoticeBoard = New System.Windows.Forms.ListBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -100,6 +102,7 @@ Partial Class overall_sched_form
         '
         'GroupBox1
         '
+        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.MonthName)
         Me.GroupBox1.Controls.Add(Me.Saturday)
@@ -169,7 +172,7 @@ Partial Class overall_sched_form
         '
         Me.MonthName.AutoSize = True
         Me.MonthName.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MonthName.Location = New System.Drawing.Point(318, 46)
+        Me.MonthName.Location = New System.Drawing.Point(357, 56)
         Me.MonthName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MonthName.Name = "MonthName"
         Me.MonthName.Size = New System.Drawing.Size(163, 55)
@@ -178,9 +181,10 @@ Partial Class overall_sched_form
         '
         'Saturday
         '
-        Me.Saturday.BackColor = System.Drawing.Color.Crimson
+        Me.Saturday.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Saturday.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Saturday.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Saturday.ForeColor = System.Drawing.Color.White
         Me.Saturday.Location = New System.Drawing.Point(656, 124)
         Me.Saturday.Margin = New System.Windows.Forms.Padding(4)
         Me.Saturday.Name = "Saturday"
@@ -193,7 +197,7 @@ Partial Class overall_sched_form
         '
         Me.YearNumber.AutoSize = True
         Me.YearNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.YearNumber.Location = New System.Drawing.Point(387, -2)
+        Me.YearNumber.Location = New System.Drawing.Point(400, 15)
         Me.YearNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.YearNumber.Name = "YearNumber"
         Me.YearNumber.Size = New System.Drawing.Size(68, 29)
@@ -221,7 +225,7 @@ Partial Class overall_sched_form
         Me.YearForward.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.YearForward.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.YearForward.ForeColor = System.Drawing.Color.Transparent
-        Me.YearForward.Location = New System.Drawing.Point(486, -8)
+        Me.YearForward.Location = New System.Drawing.Point(484, 6)
         Me.YearForward.Margin = New System.Windows.Forms.Padding(4)
         Me.YearForward.Name = "YearForward"
         Me.YearForward.Size = New System.Drawing.Size(69, 47)
@@ -244,9 +248,10 @@ Partial Class overall_sched_form
         '
         'Friday
         '
-        Me.Friday.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Friday.BackColor = System.Drawing.Color.Green
         Me.Friday.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Friday.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Friday.ForeColor = System.Drawing.Color.White
         Me.Friday.Location = New System.Drawing.Point(568, 124)
         Me.Friday.Margin = New System.Windows.Forms.Padding(4)
         Me.Friday.Name = "Friday"
@@ -262,7 +267,7 @@ Partial Class overall_sched_form
         Me.YearBackward.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.YearBackward.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.YearBackward.ForeColor = System.Drawing.Color.Transparent
-        Me.YearBackward.Location = New System.Drawing.Point(319, -8)
+        Me.YearBackward.Location = New System.Drawing.Point(317, 6)
         Me.YearBackward.Margin = New System.Windows.Forms.Padding(4)
         Me.YearBackward.Name = "YearBackward"
         Me.YearBackward.Size = New System.Drawing.Size(69, 47)
@@ -271,9 +276,10 @@ Partial Class overall_sched_form
         '
         'Thursday
         '
-        Me.Thursday.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Thursday.BackColor = System.Drawing.Color.Green
         Me.Thursday.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Thursday.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Thursday.ForeColor = System.Drawing.Color.White
         Me.Thursday.Location = New System.Drawing.Point(480, 124)
         Me.Thursday.Margin = New System.Windows.Forms.Padding(4)
         Me.Thursday.Name = "Thursday"
@@ -284,9 +290,10 @@ Partial Class overall_sched_form
         '
         'Wednesday
         '
-        Me.Wednesday.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Wednesday.BackColor = System.Drawing.Color.Green
         Me.Wednesday.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Wednesday.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Wednesday.ForeColor = System.Drawing.Color.White
         Me.Wednesday.Location = New System.Drawing.Point(392, 124)
         Me.Wednesday.Margin = New System.Windows.Forms.Padding(4)
         Me.Wednesday.Name = "Wednesday"
@@ -297,9 +304,10 @@ Partial Class overall_sched_form
         '
         'Tuesday
         '
-        Me.Tuesday.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Tuesday.BackColor = System.Drawing.Color.Green
         Me.Tuesday.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Tuesday.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tuesday.ForeColor = System.Drawing.Color.White
         Me.Tuesday.Location = New System.Drawing.Point(304, 124)
         Me.Tuesday.Margin = New System.Windows.Forms.Padding(4)
         Me.Tuesday.Name = "Tuesday"
@@ -310,9 +318,10 @@ Partial Class overall_sched_form
         '
         'Monday
         '
-        Me.Monday.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Monday.BackColor = System.Drawing.Color.Green
         Me.Monday.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Monday.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Monday.ForeColor = System.Drawing.Color.White
         Me.Monday.Location = New System.Drawing.Point(216, 124)
         Me.Monday.Margin = New System.Windows.Forms.Padding(4)
         Me.Monday.Name = "Monday"
@@ -323,8 +332,9 @@ Partial Class overall_sched_form
         '
         'Saturday6
         '
-        Me.Saturday6.BackColor = System.Drawing.Color.LightGray
+        Me.Saturday6.BackColor = System.Drawing.Color.MintCream
         Me.Saturday6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Saturday6.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Saturday6.Location = New System.Drawing.Point(656, 567)
         Me.Saturday6.Margin = New System.Windows.Forms.Padding(4)
         Me.Saturday6.Name = "Saturday6"
@@ -335,8 +345,9 @@ Partial Class overall_sched_form
         '
         'Friday6
         '
-        Me.Friday6.BackColor = System.Drawing.Color.LightGray
+        Me.Friday6.BackColor = System.Drawing.Color.Honeydew
         Me.Friday6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Friday6.ForeColor = System.Drawing.Color.Green
         Me.Friday6.Location = New System.Drawing.Point(568, 567)
         Me.Friday6.Margin = New System.Windows.Forms.Padding(4)
         Me.Friday6.Name = "Friday6"
@@ -347,8 +358,9 @@ Partial Class overall_sched_form
         '
         'Thursday6
         '
-        Me.Thursday6.BackColor = System.Drawing.Color.LightGray
+        Me.Thursday6.BackColor = System.Drawing.Color.Honeydew
         Me.Thursday6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Thursday6.ForeColor = System.Drawing.Color.Green
         Me.Thursday6.Location = New System.Drawing.Point(482, 567)
         Me.Thursday6.Margin = New System.Windows.Forms.Padding(4)
         Me.Thursday6.Name = "Thursday6"
@@ -359,8 +371,9 @@ Partial Class overall_sched_form
         '
         'Wednesday6
         '
-        Me.Wednesday6.BackColor = System.Drawing.Color.LightGray
+        Me.Wednesday6.BackColor = System.Drawing.Color.Honeydew
         Me.Wednesday6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Wednesday6.ForeColor = System.Drawing.Color.Green
         Me.Wednesday6.Location = New System.Drawing.Point(394, 567)
         Me.Wednesday6.Margin = New System.Windows.Forms.Padding(4)
         Me.Wednesday6.Name = "Wednesday6"
@@ -371,8 +384,9 @@ Partial Class overall_sched_form
         '
         'Tuesday6
         '
-        Me.Tuesday6.BackColor = System.Drawing.Color.LightGray
+        Me.Tuesday6.BackColor = System.Drawing.Color.Honeydew
         Me.Tuesday6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Tuesday6.ForeColor = System.Drawing.Color.Green
         Me.Tuesday6.Location = New System.Drawing.Point(306, 567)
         Me.Tuesday6.Margin = New System.Windows.Forms.Padding(4)
         Me.Tuesday6.Name = "Tuesday6"
@@ -383,8 +397,9 @@ Partial Class overall_sched_form
         '
         'Monday6
         '
-        Me.Monday6.BackColor = System.Drawing.Color.LightGray
+        Me.Monday6.BackColor = System.Drawing.Color.Honeydew
         Me.Monday6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Monday6.ForeColor = System.Drawing.Color.Green
         Me.Monday6.Location = New System.Drawing.Point(216, 567)
         Me.Monday6.Margin = New System.Windows.Forms.Padding(4)
         Me.Monday6.Name = "Monday6"
@@ -395,8 +410,9 @@ Partial Class overall_sched_form
         '
         'Sunday6
         '
-        Me.Sunday6.BackColor = System.Drawing.Color.LightGray
+        Me.Sunday6.BackColor = System.Drawing.Color.MintCream
         Me.Sunday6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Sunday6.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Sunday6.Location = New System.Drawing.Point(128, 567)
         Me.Sunday6.Margin = New System.Windows.Forms.Padding(4)
         Me.Sunday6.Name = "Sunday6"
@@ -407,8 +423,9 @@ Partial Class overall_sched_form
         '
         'Saturday5
         '
-        Me.Saturday5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Saturday5.BackColor = System.Drawing.Color.MintCream
         Me.Saturday5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Saturday5.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Saturday5.Location = New System.Drawing.Point(656, 493)
         Me.Saturday5.Margin = New System.Windows.Forms.Padding(4)
         Me.Saturday5.Name = "Saturday5"
@@ -419,8 +436,9 @@ Partial Class overall_sched_form
         '
         'Friday5
         '
-        Me.Friday5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Friday5.BackColor = System.Drawing.Color.Honeydew
         Me.Friday5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Friday5.ForeColor = System.Drawing.Color.Green
         Me.Friday5.Location = New System.Drawing.Point(568, 493)
         Me.Friday5.Margin = New System.Windows.Forms.Padding(4)
         Me.Friday5.Name = "Friday5"
@@ -431,8 +449,9 @@ Partial Class overall_sched_form
         '
         'Thursday5
         '
-        Me.Thursday5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Thursday5.BackColor = System.Drawing.Color.Honeydew
         Me.Thursday5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Thursday5.ForeColor = System.Drawing.Color.Green
         Me.Thursday5.Location = New System.Drawing.Point(482, 493)
         Me.Thursday5.Margin = New System.Windows.Forms.Padding(4)
         Me.Thursday5.Name = "Thursday5"
@@ -443,8 +462,9 @@ Partial Class overall_sched_form
         '
         'Wednesday5
         '
-        Me.Wednesday5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Wednesday5.BackColor = System.Drawing.Color.Honeydew
         Me.Wednesday5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Wednesday5.ForeColor = System.Drawing.Color.Green
         Me.Wednesday5.Location = New System.Drawing.Point(394, 493)
         Me.Wednesday5.Margin = New System.Windows.Forms.Padding(4)
         Me.Wednesday5.Name = "Wednesday5"
@@ -455,8 +475,9 @@ Partial Class overall_sched_form
         '
         'Tuesday5
         '
-        Me.Tuesday5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Tuesday5.BackColor = System.Drawing.Color.Honeydew
         Me.Tuesday5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Tuesday5.ForeColor = System.Drawing.Color.Green
         Me.Tuesday5.Location = New System.Drawing.Point(306, 493)
         Me.Tuesday5.Margin = New System.Windows.Forms.Padding(4)
         Me.Tuesday5.Name = "Tuesday5"
@@ -467,8 +488,9 @@ Partial Class overall_sched_form
         '
         'Monday5
         '
-        Me.Monday5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Monday5.BackColor = System.Drawing.Color.Honeydew
         Me.Monday5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Monday5.ForeColor = System.Drawing.Color.Green
         Me.Monday5.Location = New System.Drawing.Point(216, 493)
         Me.Monday5.Margin = New System.Windows.Forms.Padding(4)
         Me.Monday5.Name = "Monday5"
@@ -479,8 +501,9 @@ Partial Class overall_sched_form
         '
         'Sunday5
         '
-        Me.Sunday5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Sunday5.BackColor = System.Drawing.Color.MintCream
         Me.Sunday5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Sunday5.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Sunday5.Location = New System.Drawing.Point(128, 493)
         Me.Sunday5.Margin = New System.Windows.Forms.Padding(4)
         Me.Sunday5.Name = "Sunday5"
@@ -491,8 +514,9 @@ Partial Class overall_sched_form
         '
         'Saturday4
         '
-        Me.Saturday4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Saturday4.BackColor = System.Drawing.Color.MintCream
         Me.Saturday4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Saturday4.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Saturday4.Location = New System.Drawing.Point(656, 419)
         Me.Saturday4.Margin = New System.Windows.Forms.Padding(4)
         Me.Saturday4.Name = "Saturday4"
@@ -503,8 +527,9 @@ Partial Class overall_sched_form
         '
         'Friday4
         '
-        Me.Friday4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Friday4.BackColor = System.Drawing.Color.Honeydew
         Me.Friday4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Friday4.ForeColor = System.Drawing.Color.Green
         Me.Friday4.Location = New System.Drawing.Point(568, 419)
         Me.Friday4.Margin = New System.Windows.Forms.Padding(4)
         Me.Friday4.Name = "Friday4"
@@ -515,8 +540,9 @@ Partial Class overall_sched_form
         '
         'Thursday4
         '
-        Me.Thursday4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Thursday4.BackColor = System.Drawing.Color.Honeydew
         Me.Thursday4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Thursday4.ForeColor = System.Drawing.Color.Green
         Me.Thursday4.Location = New System.Drawing.Point(482, 419)
         Me.Thursday4.Margin = New System.Windows.Forms.Padding(4)
         Me.Thursday4.Name = "Thursday4"
@@ -527,8 +553,9 @@ Partial Class overall_sched_form
         '
         'Wednesday4
         '
-        Me.Wednesday4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Wednesday4.BackColor = System.Drawing.Color.Honeydew
         Me.Wednesday4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Wednesday4.ForeColor = System.Drawing.Color.Green
         Me.Wednesday4.Location = New System.Drawing.Point(394, 419)
         Me.Wednesday4.Margin = New System.Windows.Forms.Padding(4)
         Me.Wednesday4.Name = "Wednesday4"
@@ -539,8 +566,9 @@ Partial Class overall_sched_form
         '
         'Tuesday4
         '
-        Me.Tuesday4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Tuesday4.BackColor = System.Drawing.Color.Honeydew
         Me.Tuesday4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Tuesday4.ForeColor = System.Drawing.Color.Green
         Me.Tuesday4.Location = New System.Drawing.Point(306, 419)
         Me.Tuesday4.Margin = New System.Windows.Forms.Padding(4)
         Me.Tuesday4.Name = "Tuesday4"
@@ -551,8 +579,9 @@ Partial Class overall_sched_form
         '
         'Monday4
         '
-        Me.Monday4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Monday4.BackColor = System.Drawing.Color.Honeydew
         Me.Monday4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Monday4.ForeColor = System.Drawing.Color.Green
         Me.Monday4.Location = New System.Drawing.Point(216, 419)
         Me.Monday4.Margin = New System.Windows.Forms.Padding(4)
         Me.Monday4.Name = "Monday4"
@@ -563,8 +592,9 @@ Partial Class overall_sched_form
         '
         'Sunday4
         '
-        Me.Sunday4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Sunday4.BackColor = System.Drawing.Color.MintCream
         Me.Sunday4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Sunday4.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Sunday4.Location = New System.Drawing.Point(128, 419)
         Me.Sunday4.Margin = New System.Windows.Forms.Padding(4)
         Me.Sunday4.Name = "Sunday4"
@@ -575,8 +605,9 @@ Partial Class overall_sched_form
         '
         'Saturday3
         '
-        Me.Saturday3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Saturday3.BackColor = System.Drawing.Color.MintCream
         Me.Saturday3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Saturday3.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Saturday3.Location = New System.Drawing.Point(656, 345)
         Me.Saturday3.Margin = New System.Windows.Forms.Padding(4)
         Me.Saturday3.Name = "Saturday3"
@@ -587,8 +618,9 @@ Partial Class overall_sched_form
         '
         'Friday3
         '
-        Me.Friday3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Friday3.BackColor = System.Drawing.Color.Honeydew
         Me.Friday3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Friday3.ForeColor = System.Drawing.Color.Green
         Me.Friday3.Location = New System.Drawing.Point(568, 345)
         Me.Friday3.Margin = New System.Windows.Forms.Padding(4)
         Me.Friday3.Name = "Friday3"
@@ -599,8 +631,9 @@ Partial Class overall_sched_form
         '
         'Thursday3
         '
-        Me.Thursday3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Thursday3.BackColor = System.Drawing.Color.Honeydew
         Me.Thursday3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Thursday3.ForeColor = System.Drawing.Color.Green
         Me.Thursday3.Location = New System.Drawing.Point(482, 345)
         Me.Thursday3.Margin = New System.Windows.Forms.Padding(4)
         Me.Thursday3.Name = "Thursday3"
@@ -611,8 +644,9 @@ Partial Class overall_sched_form
         '
         'Wednesday3
         '
-        Me.Wednesday3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Wednesday3.BackColor = System.Drawing.Color.Honeydew
         Me.Wednesday3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Wednesday3.ForeColor = System.Drawing.Color.Green
         Me.Wednesday3.Location = New System.Drawing.Point(394, 345)
         Me.Wednesday3.Margin = New System.Windows.Forms.Padding(4)
         Me.Wednesday3.Name = "Wednesday3"
@@ -623,8 +657,9 @@ Partial Class overall_sched_form
         '
         'Tuesday3
         '
-        Me.Tuesday3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Tuesday3.BackColor = System.Drawing.Color.Honeydew
         Me.Tuesday3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Tuesday3.ForeColor = System.Drawing.Color.Green
         Me.Tuesday3.Location = New System.Drawing.Point(306, 345)
         Me.Tuesday3.Margin = New System.Windows.Forms.Padding(4)
         Me.Tuesday3.Name = "Tuesday3"
@@ -635,8 +670,9 @@ Partial Class overall_sched_form
         '
         'Monday3
         '
-        Me.Monday3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Monday3.BackColor = System.Drawing.Color.Honeydew
         Me.Monday3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Monday3.ForeColor = System.Drawing.Color.Green
         Me.Monday3.Location = New System.Drawing.Point(216, 345)
         Me.Monday3.Margin = New System.Windows.Forms.Padding(4)
         Me.Monday3.Name = "Monday3"
@@ -647,8 +683,9 @@ Partial Class overall_sched_form
         '
         'Sunday3
         '
-        Me.Sunday3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Sunday3.BackColor = System.Drawing.Color.MintCream
         Me.Sunday3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Sunday3.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Sunday3.Location = New System.Drawing.Point(128, 345)
         Me.Sunday3.Margin = New System.Windows.Forms.Padding(4)
         Me.Sunday3.Name = "Sunday3"
@@ -659,8 +696,9 @@ Partial Class overall_sched_form
         '
         'Saturday2
         '
-        Me.Saturday2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Saturday2.BackColor = System.Drawing.Color.MintCream
         Me.Saturday2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Saturday2.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Saturday2.Location = New System.Drawing.Point(656, 271)
         Me.Saturday2.Margin = New System.Windows.Forms.Padding(4)
         Me.Saturday2.Name = "Saturday2"
@@ -671,8 +709,9 @@ Partial Class overall_sched_form
         '
         'Friday2
         '
-        Me.Friday2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Friday2.BackColor = System.Drawing.Color.Honeydew
         Me.Friday2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Friday2.ForeColor = System.Drawing.Color.Green
         Me.Friday2.Location = New System.Drawing.Point(568, 271)
         Me.Friday2.Margin = New System.Windows.Forms.Padding(4)
         Me.Friday2.Name = "Friday2"
@@ -683,8 +722,9 @@ Partial Class overall_sched_form
         '
         'Thursday2
         '
-        Me.Thursday2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Thursday2.BackColor = System.Drawing.Color.Honeydew
         Me.Thursday2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Thursday2.ForeColor = System.Drawing.Color.Green
         Me.Thursday2.Location = New System.Drawing.Point(482, 271)
         Me.Thursday2.Margin = New System.Windows.Forms.Padding(4)
         Me.Thursday2.Name = "Thursday2"
@@ -695,8 +735,9 @@ Partial Class overall_sched_form
         '
         'Wednesday2
         '
-        Me.Wednesday2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Wednesday2.BackColor = System.Drawing.Color.Honeydew
         Me.Wednesday2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Wednesday2.ForeColor = System.Drawing.Color.Green
         Me.Wednesday2.Location = New System.Drawing.Point(394, 271)
         Me.Wednesday2.Margin = New System.Windows.Forms.Padding(4)
         Me.Wednesday2.Name = "Wednesday2"
@@ -707,8 +748,9 @@ Partial Class overall_sched_form
         '
         'Tuesday2
         '
-        Me.Tuesday2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Tuesday2.BackColor = System.Drawing.Color.Honeydew
         Me.Tuesday2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Tuesday2.ForeColor = System.Drawing.Color.Green
         Me.Tuesday2.Location = New System.Drawing.Point(306, 271)
         Me.Tuesday2.Margin = New System.Windows.Forms.Padding(4)
         Me.Tuesday2.Name = "Tuesday2"
@@ -719,8 +761,9 @@ Partial Class overall_sched_form
         '
         'Monday2
         '
-        Me.Monday2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Monday2.BackColor = System.Drawing.Color.Honeydew
         Me.Monday2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Monday2.ForeColor = System.Drawing.Color.Green
         Me.Monday2.Location = New System.Drawing.Point(216, 271)
         Me.Monday2.Margin = New System.Windows.Forms.Padding(4)
         Me.Monday2.Name = "Monday2"
@@ -731,8 +774,9 @@ Partial Class overall_sched_form
         '
         'Sunday2
         '
-        Me.Sunday2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Sunday2.BackColor = System.Drawing.Color.MintCream
         Me.Sunday2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Sunday2.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Sunday2.Location = New System.Drawing.Point(128, 271)
         Me.Sunday2.Margin = New System.Windows.Forms.Padding(4)
         Me.Sunday2.Name = "Sunday2"
@@ -743,8 +787,9 @@ Partial Class overall_sched_form
         '
         'Saturday1
         '
-        Me.Saturday1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Saturday1.BackColor = System.Drawing.Color.MintCream
         Me.Saturday1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Saturday1.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Saturday1.Location = New System.Drawing.Point(656, 197)
         Me.Saturday1.Margin = New System.Windows.Forms.Padding(4)
         Me.Saturday1.Name = "Saturday1"
@@ -755,8 +800,9 @@ Partial Class overall_sched_form
         '
         'Friday1
         '
-        Me.Friday1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Friday1.BackColor = System.Drawing.Color.Honeydew
         Me.Friday1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Friday1.ForeColor = System.Drawing.Color.Green
         Me.Friday1.Location = New System.Drawing.Point(568, 197)
         Me.Friday1.Margin = New System.Windows.Forms.Padding(4)
         Me.Friday1.Name = "Friday1"
@@ -767,8 +813,9 @@ Partial Class overall_sched_form
         '
         'Thursday1
         '
-        Me.Thursday1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Thursday1.BackColor = System.Drawing.Color.Honeydew
         Me.Thursday1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Thursday1.ForeColor = System.Drawing.Color.Green
         Me.Thursday1.Location = New System.Drawing.Point(482, 197)
         Me.Thursday1.Margin = New System.Windows.Forms.Padding(4)
         Me.Thursday1.Name = "Thursday1"
@@ -779,8 +826,9 @@ Partial Class overall_sched_form
         '
         'Wednesday1
         '
-        Me.Wednesday1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Wednesday1.BackColor = System.Drawing.Color.Honeydew
         Me.Wednesday1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Wednesday1.ForeColor = System.Drawing.Color.Green
         Me.Wednesday1.Location = New System.Drawing.Point(394, 197)
         Me.Wednesday1.Margin = New System.Windows.Forms.Padding(4)
         Me.Wednesday1.Name = "Wednesday1"
@@ -791,8 +839,9 @@ Partial Class overall_sched_form
         '
         'Tuesday1
         '
-        Me.Tuesday1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Tuesday1.BackColor = System.Drawing.Color.Honeydew
         Me.Tuesday1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Tuesday1.ForeColor = System.Drawing.Color.Green
         Me.Tuesday1.Location = New System.Drawing.Point(306, 197)
         Me.Tuesday1.Margin = New System.Windows.Forms.Padding(4)
         Me.Tuesday1.Name = "Tuesday1"
@@ -803,8 +852,9 @@ Partial Class overall_sched_form
         '
         'Monday1
         '
-        Me.Monday1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Monday1.BackColor = System.Drawing.Color.Honeydew
         Me.Monday1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Monday1.ForeColor = System.Drawing.Color.Green
         Me.Monday1.Location = New System.Drawing.Point(216, 197)
         Me.Monday1.Margin = New System.Windows.Forms.Padding(4)
         Me.Monday1.Name = "Monday1"
@@ -815,8 +865,9 @@ Partial Class overall_sched_form
         '
         'Sunday1
         '
-        Me.Sunday1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Sunday1.BackColor = System.Drawing.Color.MintCream
         Me.Sunday1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Sunday1.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.Sunday1.Location = New System.Drawing.Point(128, 197)
         Me.Sunday1.Margin = New System.Windows.Forms.Padding(4)
         Me.Sunday1.Name = "Sunday1"
@@ -827,9 +878,10 @@ Partial Class overall_sched_form
         '
         'Sunday
         '
-        Me.Sunday.BackColor = System.Drawing.Color.Crimson
+        Me.Sunday.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Sunday.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Sunday.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Sunday.ForeColor = System.Drawing.Color.White
         Me.Sunday.Location = New System.Drawing.Point(128, 124)
         Me.Sunday.Margin = New System.Windows.Forms.Padding(4)
         Me.Sunday.Name = "Sunday"
@@ -841,6 +893,7 @@ Partial Class overall_sched_form
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.lstNoticeBoard)
         Me.GroupBox2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.DarkGreen
         Me.GroupBox2.Location = New System.Drawing.Point(12, 71)
@@ -849,6 +902,17 @@ Partial Class overall_sched_form
         Me.GroupBox2.TabIndex = 15
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Notice Board"
+        '
+        'lstNoticeBoard
+        '
+        Me.lstNoticeBoard.BackColor = System.Drawing.Color.Honeydew
+        Me.lstNoticeBoard.ForeColor = System.Drawing.Color.DarkGreen
+        Me.lstNoticeBoard.FormattingEnabled = True
+        Me.lstNoticeBoard.ItemHeight = 19
+        Me.lstNoticeBoard.Location = New System.Drawing.Point(6, 42)
+        Me.lstNoticeBoard.Name = "lstNoticeBoard"
+        Me.lstNoticeBoard.Size = New System.Drawing.Size(432, 631)
+        Me.lstNoticeBoard.TabIndex = 0
         '
         'Label2
         '
@@ -885,6 +949,7 @@ Partial Class overall_sched_form
         Me.Text = "overall_sched_form"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -949,4 +1014,5 @@ Partial Class overall_sched_form
     Friend WithEvents Sunday As System.Windows.Forms.Button
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lstNoticeBoard As System.Windows.Forms.ListBox
 End Class

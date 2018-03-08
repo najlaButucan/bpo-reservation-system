@@ -100,7 +100,6 @@ C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x
 C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Reservation System.exe
 C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Reservation System.pdb
 C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Reservation System.xml
-C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation System.vbprojResolveAssemblyReference.cache
 C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.about_form.resources
 C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_home.resources
 C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.confirm.resources
@@ -132,3 +131,67 @@ C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x
 C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_Report.resources
 C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_add.resources
 C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System._Login.resources
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Admin_edit.resx
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Admin_edit.Designer.vb
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Admin_edit.vb
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_edit.resources
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Admin_add_equips.resx
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Admin_edit_equips.resx
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Admin_add_equips.Designer.vb
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Admin_add_equips.vb
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Admin_edit_equips.Designer.vb
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\bin\Debug\Admin_edit_equips.vb
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_add_equips.resources
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_edit_equips.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation System.exe
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation System.xml
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation System.pdb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_home.resx
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_Equips.resx
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_Rooms.resx
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_Report.resx
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_add.resx
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_edit.resx
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_add_equips.resx
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_edit_equips.resx
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_home.Designer.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_home.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_Equips.Designer.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_Equips.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_Rooms.Designer.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_Rooms.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_Report.Designer.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_Report.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_add.Designer.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_add.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_edit.Designer.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_edit.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_add_equips.Designer.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_add_equips.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_edit_equips.Designer.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Admin_edit_equips.vb
+D:\Reservation System Update\Reservation System\bin\Debug\Reservation System.exe
+D:\Reservation System Update\Reservation System\bin\Debug\Reservation System.pdb
+D:\Reservation System Update\Reservation System\bin\Debug\Reservation System.xml
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation System.vbprojResolveAssemblyReference.cache
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.about_form.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_home.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.confirm.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_Equips.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_Rooms.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_Report.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_add.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_edit.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_add_equips.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Admin_edit_equips.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.home_form.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.overall_sched_form.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.edit_reservation_form.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.student_event_form.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.reserved_materials_form.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Resources.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.reservation_form.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System._Login.resources
+D:\Reservation System Update\Reservation System\obj\x86\Debug\Reservation System.vbproj.GenerateResource.Cache
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.admin_about.resources
+C:\Users\Najla\Documents\Kenn\Reservation System Update\Reservation System\obj\x86\Debug\Reservation_System.Continue_form.resources

@@ -23,7 +23,6 @@ Partial Class Admin_Report
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.b_ovaerall_sched = New System.Windows.Forms.Button()
         Me.b_home = New System.Windows.Forms.Button()
@@ -31,11 +30,21 @@ Partial Class Admin_Report
         Me.b_edit_reservation = New System.Windows.Forms.Button()
         Me.b_reservation = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.materials_checked = New System.Windows.Forms.DataGridView()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ReservationID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.DateofReservation = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.BuildingID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.RoomID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.StudentID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ReservationDate = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ETimeIN = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ETimeOUT = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Comments = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.b_reservation_nxt = New System.Windows.Forms.Button()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox1.SuspendLayout()
-        CType(Me.materials_checked, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -50,25 +59,13 @@ Partial Class Admin_Report
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Admin Access - Rooms" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(902, 6)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 38)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "x" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(857, 1)
+        Me.Label5.Location = New System.Drawing.Point(1096, 1)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(35, 38)
         Me.Label5.TabIndex = 24
@@ -97,7 +94,7 @@ Partial Class Admin_Report
         Me.b_home.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_home.ForeColor = System.Drawing.Color.Transparent
-        Me.b_home.Location = New System.Drawing.Point(22, 413)
+        Me.b_home.Location = New System.Drawing.Point(22, 494)
         Me.b_home.Name = "b_home"
         Me.b_home.Size = New System.Drawing.Size(163, 53)
         Me.b_home.TabIndex = 28
@@ -112,7 +109,7 @@ Partial Class Admin_Report
         Me.b_about.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_about.ForeColor = System.Drawing.Color.Transparent
-        Me.b_about.Location = New System.Drawing.Point(21, 472)
+        Me.b_about.Location = New System.Drawing.Point(21, 553)
         Me.b_about.Name = "b_about"
         Me.b_about.Size = New System.Drawing.Size(163, 53)
         Me.b_about.TabIndex = 27
@@ -153,43 +150,82 @@ Partial Class Admin_Report
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.materials_checked)
+        Me.GroupBox1.Controls.Add(Me.ListView1)
         Me.GroupBox1.Controls.Add(Me.b_reservation_nxt)
-        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.DarkGreen
         Me.GroupBox1.Location = New System.Drawing.Point(196, 52)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(688, 495)
+        Me.GroupBox1.Size = New System.Drawing.Size(935, 555)
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Reports"
         '
-        'Button1
+        'ListView1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.Reservation_System.My.Resources.Resources.Button_01_green_sq
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.Transparent
-        Me.Button1.Location = New System.Drawing.Point(567, 428)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(99, 45)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Print"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.ListView1.BackColor = System.Drawing.Color.Honeydew
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ReservationID, Me.DateofReservation, Me.BuildingID, Me.RoomID, Me.ReservationDate, Me.ETimeIN, Me.ETimeOUT, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.Comments, Me.StudentID})
+        Me.ListView1.ForeColor = System.Drawing.Color.DarkGreen
+        Me.ListView1.GridLines = True
+        Me.ListView1.Location = New System.Drawing.Point(43, 52)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(892, 424)
+        Me.ListView1.TabIndex = 14
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
-        'materials_checked
+        'ReservationID
         '
-        Me.materials_checked.BackgroundColor = System.Drawing.Color.Honeydew
-        Me.materials_checked.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.materials_checked.GridColor = System.Drawing.Color.DarkGreen
-        Me.materials_checked.Location = New System.Drawing.Point(23, 41)
-        Me.materials_checked.Name = "materials_checked"
-        Me.materials_checked.Size = New System.Drawing.Size(643, 362)
-        Me.materials_checked.TabIndex = 11
+        Me.ReservationID.Text = "Reservation ID"
+        Me.ReservationID.Width = 200
+        '
+        'DateofReservation
+        '
+        Me.DateofReservation.Text = "Date of Reservation"
+        Me.DateofReservation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.DateofReservation.Width = 200
+        '
+        'BuildingID
+        '
+        Me.BuildingID.Text = "Building ID"
+        Me.BuildingID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.BuildingID.Width = 200
+        '
+        'RoomID
+        '
+        Me.RoomID.Text = "Room ID"
+        Me.RoomID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.RoomID.Width = 200
+        '
+        'StudentID
+        '
+        Me.StudentID.Text = "Student ID"
+        Me.StudentID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.StudentID.Width = 200
+        '
+        'ReservationDate
+        '
+        Me.ReservationDate.Text = "Reservation Date"
+        Me.ReservationDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ReservationDate.Width = 200
+        '
+        'ETimeIN
+        '
+        Me.ETimeIN.Text = "Time IN"
+        Me.ETimeIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ETimeIN.Width = 200
+        '
+        'ETimeOUT
+        '
+        Me.ETimeOUT.Text = "Time Out"
+        Me.ETimeOUT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ETimeOUT.Width = 200
+        '
+        'Comments
+        '
+        Me.Comments.Text = "Comments"
+        Me.Comments.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Comments.Width = 200
         '
         'b_reservation_nxt
         '
@@ -199,7 +235,7 @@ Partial Class Admin_Report
         Me.b_reservation_nxt.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_reservation_nxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_reservation_nxt.ForeColor = System.Drawing.Color.Transparent
-        Me.b_reservation_nxt.Location = New System.Drawing.Point(23, 428)
+        Me.b_reservation_nxt.Location = New System.Drawing.Point(816, 493)
         Me.b_reservation_nxt.Margin = New System.Windows.Forms.Padding(0)
         Me.b_reservation_nxt.Name = "b_reservation_nxt"
         Me.b_reservation_nxt.Size = New System.Drawing.Size(99, 45)
@@ -207,13 +243,31 @@ Partial Class Admin_Report
         Me.b_reservation_nxt.Text = "Show"
         Me.b_reservation_nxt.UseVisualStyleBackColor = False
         '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "no_occupants"
+        Me.ColumnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader1.Width = 200
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Purpose"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader2.Width = 200
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Organization"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 200
+        '
         'Admin_Report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Reservation_System.My.Resources.Resources.bg_main_admin1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(896, 553)
+        Me.ClientSize = New System.Drawing.Size(1143, 619)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.b_ovaerall_sched)
         Me.Controls.Add(Me.b_home)
@@ -221,26 +275,23 @@ Partial Class Admin_Report
         Me.Controls.Add(Me.b_edit_reservation)
         Me.Controls.Add(Me.b_reservation)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.DarkGreen
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaximumSize = New System.Drawing.Size(896, 553)
-        Me.MinimumSize = New System.Drawing.Size(896, 553)
+        Me.MaximumSize = New System.Drawing.Size(1143, 619)
+        Me.MinimumSize = New System.Drawing.Size(1143, 619)
         Me.Name = "Admin_Report"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin_home"
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.materials_checked, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents b_ovaerall_sched As System.Windows.Forms.Button
     Friend WithEvents b_home As System.Windows.Forms.Button
@@ -249,6 +300,17 @@ Partial Class Admin_Report
     Friend WithEvents b_reservation As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents b_reservation_nxt As System.Windows.Forms.Button
-    Friend WithEvents materials_checked As System.Windows.Forms.DataGridView
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents ReservationID As System.Windows.Forms.ColumnHeader
+    Friend WithEvents DateofReservation As System.Windows.Forms.ColumnHeader
+    Friend WithEvents BuildingID As System.Windows.Forms.ColumnHeader
+    Friend WithEvents RoomID As System.Windows.Forms.ColumnHeader
+    Friend WithEvents StudentID As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ReservationDate As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ETimeIN As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ETimeOUT As System.Windows.Forms.ColumnHeader
+    Friend WithEvents Comments As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
 End Class

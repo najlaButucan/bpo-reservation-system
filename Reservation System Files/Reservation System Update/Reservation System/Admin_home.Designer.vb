@@ -24,7 +24,6 @@ Partial Class Admin_home
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -50,18 +49,6 @@ Partial Class Admin_home
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Admin Access - Rooms Reservation"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(902, 6)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 38)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "x" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
@@ -72,9 +59,9 @@ Partial Class Admin_home
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.DarkGreen
-        Me.GroupBox1.Location = New System.Drawing.Point(210, 73)
+        Me.GroupBox1.Location = New System.Drawing.Point(224, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(660, 468)
+        Me.GroupBox1.Size = New System.Drawing.Size(907, 534)
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Welcome..."
@@ -83,7 +70,7 @@ Partial Class Admin_home
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(307, 408)
+        Me.Label3.Location = New System.Drawing.Point(554, 449)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(200, 44)
         Me.Label3.TabIndex = 1
@@ -93,7 +80,7 @@ Partial Class Admin_home
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(97, 175)
+        Me.Label4.Location = New System.Drawing.Point(113, 203)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(394, 115)
         Me.Label4.TabIndex = 0
@@ -107,13 +94,13 @@ Partial Class Admin_home
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(857, 1)
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label5.Location = New System.Drawing.Point(1045, 12)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(35, 38)
+        Me.Label5.Size = New System.Drawing.Size(86, 25)
         Me.Label5.TabIndex = 24
-        Me.Label5.Text = "x"
+        Me.Label5.Text = "Log out"
         '
         'b_ovaerall_sched
         '
@@ -123,7 +110,7 @@ Partial Class Admin_home
         Me.b_ovaerall_sched.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_ovaerall_sched.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_ovaerall_sched.ForeColor = System.Drawing.Color.Transparent
-        Me.b_ovaerall_sched.Location = New System.Drawing.Point(22, 135)
+        Me.b_ovaerall_sched.Location = New System.Drawing.Point(30, 135)
         Me.b_ovaerall_sched.Name = "b_ovaerall_sched"
         Me.b_ovaerall_sched.Size = New System.Drawing.Size(163, 53)
         Me.b_ovaerall_sched.TabIndex = 29
@@ -138,7 +125,7 @@ Partial Class Admin_home
         Me.b_home.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_home.ForeColor = System.Drawing.Color.Transparent
-        Me.b_home.Location = New System.Drawing.Point(22, 413)
+        Me.b_home.Location = New System.Drawing.Point(30, 495)
         Me.b_home.Name = "b_home"
         Me.b_home.Size = New System.Drawing.Size(163, 53)
         Me.b_home.TabIndex = 28
@@ -153,7 +140,7 @@ Partial Class Admin_home
         Me.b_about.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_about.ForeColor = System.Drawing.Color.Transparent
-        Me.b_about.Location = New System.Drawing.Point(21, 472)
+        Me.b_about.Location = New System.Drawing.Point(29, 554)
         Me.b_about.Name = "b_about"
         Me.b_about.Size = New System.Drawing.Size(163, 53)
         Me.b_about.TabIndex = 27
@@ -168,7 +155,7 @@ Partial Class Admin_home
         Me.b_edit_reservation.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_edit_reservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_edit_reservation.ForeColor = System.Drawing.Color.Transparent
-        Me.b_edit_reservation.Location = New System.Drawing.Point(22, 194)
+        Me.b_edit_reservation.Location = New System.Drawing.Point(30, 194)
         Me.b_edit_reservation.Name = "b_edit_reservation"
         Me.b_edit_reservation.Size = New System.Drawing.Size(163, 53)
         Me.b_edit_reservation.TabIndex = 26
@@ -183,7 +170,7 @@ Partial Class Admin_home
         Me.b_reservation.Cursor = System.Windows.Forms.Cursors.Hand
         Me.b_reservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.b_reservation.ForeColor = System.Drawing.Color.Transparent
-        Me.b_reservation.Location = New System.Drawing.Point(22, 76)
+        Me.b_reservation.Location = New System.Drawing.Point(30, 76)
         Me.b_reservation.Margin = New System.Windows.Forms.Padding(0)
         Me.b_reservation.Name = "b_reservation"
         Me.b_reservation.Size = New System.Drawing.Size(163, 53)
@@ -197,7 +184,7 @@ Partial Class Admin_home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Reservation_System.My.Resources.Resources.bg_main_admin_n1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(896, 553)
+        Me.ClientSize = New System.Drawing.Size(1143, 619)
         Me.Controls.Add(Me.b_ovaerall_sched)
         Me.Controls.Add(Me.b_home)
         Me.Controls.Add(Me.b_about)
@@ -205,15 +192,14 @@ Partial Class Admin_home
         Me.Controls.Add(Me.b_reservation)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.DarkGreen
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaximumSize = New System.Drawing.Size(896, 553)
-        Me.MinimumSize = New System.Drawing.Size(896, 553)
+        Me.MaximumSize = New System.Drawing.Size(1143, 619)
+        Me.MinimumSize = New System.Drawing.Size(1143, 619)
         Me.Name = "Admin_home"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin_home"
@@ -224,7 +210,6 @@ Partial Class Admin_home
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label

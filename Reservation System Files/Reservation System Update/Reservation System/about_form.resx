@@ -118,22 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Label2.Text" xml:space="preserve">
-    <value>        This software is NOT for sale and is only intended for testing and
-compliance. The Rooms Reservation software is a digitalized room
-reservation system for the school. The school's current room reservation
-system is paper-based thus requiring students and staffs to under go
-tedious manual efforts.
+    <value>        This software is NOT for sale and is only intended for testing and compliance. The Rooms Reservation software
+is a digitalized room reservation system for the school. The school's current room reservation system is paper-based
+thus requiring students and taffs to under go tedious manual efforts.
 </value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
-    <value>        The developers of this software are currently taking up Computer
-Science course as third and fourth year students. Their main goal is  to
-digitalized the school's current rooms reservation system. The software
-development team are currently having ten members and are working
-together to create a user-friendly and a fucntional system software.
+    <value>        The developers of this software are currently taking up Computer Science course as third and fourth year
+students. Their main goal is  to digitalized the school's current rooms reservation system. The software develop-
+ment team are currently having ten members and are working together to create a user-friendly and a fucntional
+system software.
 
-        This system is a software project that the developers' professor in
-Business Process Outsourcing (BPO) subject has required them to create
-and should be submitted before midterms.</value>
+        This system is a software project that the developers' professor in Business Process Outsourcing (BPO) subject has
+required them to create and should be submitted before midterms.</value>
   </data>
 </root>

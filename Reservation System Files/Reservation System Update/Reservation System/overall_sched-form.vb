@@ -1,5 +1,11 @@
-﻿Public Class overall_sched_form
+﻿Imports MySql.Data.MySqlClient
+
+Public Class overall_sched_form
     ''CLARK
+    Dim connection As New MySqlConnection
+    Dim cmd As New MySqlCommand
+    Dim reader As MySqlDataReader
+
     Private Sub b_reservation_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Hide()
         reservation_form.Show()
@@ -30,6 +36,8 @@
 
     Private Sub overall_sched_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        connection.ConnectionString = String.Format("server=localhost; user=root; password=baba; database=dbbporeservationsystem")
+        connection.Open()
     End Sub
 
     Dim DisplayedMonth As Integer = Now.Month
@@ -427,7 +435,278 @@
     Private Sub Label2_Click(sender As System.Object, e As System.EventArgs) Handles Label2.Click
         Me.Hide()
         home_form.Show()
+        home_form.ListView1.Visible = False
     End Sub
+
+    Private Sub SundayButtons_Click(sender As System.Object, e As System.EventArgs) Handles Sunday.Click, Sunday1.Click, Sunday2.Click, Sunday3.Click, Sunday4.Click, Sunday5.Click, Sunday6.Click
+        Dim day, year, month As Integer
+        Dim mName As String
+        Dim dateClicked As String
+        mName = MonthName.Text
+        year = Val(YearNumber.Text)
+        day = Val(sender.text)
+        month = getMonthNumber(mName)
+
+        lstNoticeBoard.Items.Clear()
+        dateClicked = Format(year, "0000") & "-" & Format(month, "00") & "-" & Format(day, "00")
+        cmd = New MySqlCommand("SELECT * FROM tbreservation WHERE ReservationDate='" & dateClicked & "'", connection)
+        reader = cmd.ExecuteReader()
+        If reader.HasRows = True Then
+            reader.Close()
+            cmd = New MySqlCommand("SELECT tbstudent.studentID, tbstudent.LastName, tbstudent.firstname, tbreservation.organization, tbreservation.purpose, tbbuilding.buildingcode, tbrooms.roomcode, tbreservation.Etimein, tbreservation.etimeout FROM tbreservation INNER JOIN tbstudent ON tbreservation.studentid=tbstudent.studentid INNER JOIN tbbuilding ON tbreservation.buildingid=tbbuilding.buildingid INNER JOIN tbrooms ON tbreservation.Roomid=tbrooms.roomid WHERE ReservationDate='" & dateClicked & "'", connection)
+            reader = cmd.ExecuteReader()
+            While reader.Read()
+                lstNoticeBoard.Items.Add("Student ID: " & reader(0).ToString)
+                lstNoticeBoard.Items.Add("Student Name: " & reader(1).ToString & ", " & reader(2).ToString)
+                lstNoticeBoard.Items.Add("Event/Org.: " & reader(3).ToString)
+                lstNoticeBoard.Items.Add("Purpose: " & reader(4).ToString)
+                lstNoticeBoard.Items.Add("Room: " & reader(5).ToString & " " & reader(6).ToString)
+                lstNoticeBoard.Items.Add("Time-In: " & reader(7).ToString)
+                lstNoticeBoard.Items.Add("Time-Out: " & reader(8).ToString)
+                lstNoticeBoard.Items.Add("---------------------------------------")
+            End While
+            reader.Close()
+        Else
+            reader.Close()
+            lstNoticeBoard.Items.Add("No Reservation!")
+        End If
+    End Sub
+
+    Private Sub MondayButtons_Click(sender As System.Object, e As System.EventArgs) Handles Monday.Click, Monday1.Click, Monday2.Click, Monday3.Click, Monday4.Click, Monday5.Click, Monday6.Click
+        Dim day, year, month As Integer
+        Dim mName As String
+        Dim dateClicked As String
+        mName = MonthName.Text
+        year = Val(YearNumber.Text)
+        day = Val(sender.text)
+        month = getMonthNumber(mName)
+
+        lstNoticeBoard.Items.Clear()
+        dateClicked = Format(year, "0000") & "-" & Format(month, "00") & "-" & Format(day, "00")
+        cmd = New MySqlCommand("SELECT * FROM tbreservation WHERE ReservationDate='" & dateClicked & "'", connection)
+        reader = cmd.ExecuteReader()
+        If reader.HasRows = True Then
+            reader.Close()
+            cmd = New MySqlCommand("SELECT tbstudent.studentID, tbstudent.LastName, tbstudent.firstname, tbreservation.organization, tbreservation.purpose, tbbuilding.buildingcode, tbrooms.roomcode, tbreservation.Etimein, tbreservation.etimeout FROM tbreservation INNER JOIN tbstudent ON tbreservation.studentid=tbstudent.studentid INNER JOIN tbbuilding ON tbreservation.buildingid=tbbuilding.buildingid INNER JOIN tbrooms ON tbreservation.Roomid=tbrooms.roomid WHERE ReservationDate='" & dateClicked & "'", connection)
+            reader = cmd.ExecuteReader()
+            While reader.Read()
+                lstNoticeBoard.Items.Add("Student ID: " & reader(0).ToString)
+                lstNoticeBoard.Items.Add("Student Name: " & reader(1).ToString & ", " & reader(2).ToString)
+                lstNoticeBoard.Items.Add("Event/Org.: " & reader(3).ToString)
+                lstNoticeBoard.Items.Add("Purpose: " & reader(4).ToString)
+                lstNoticeBoard.Items.Add("Room: " & reader(5).ToString & " " & reader(6).ToString)
+                lstNoticeBoard.Items.Add("Time-In: " & reader(7).ToString)
+                lstNoticeBoard.Items.Add("Time-Out: " & reader(8).ToString)
+                lstNoticeBoard.Items.Add("---------------------------------------")
+            End While
+            reader.Close()
+        Else
+            reader.Close()
+            lstNoticeBoard.Items.Add("No Reservation!")
+        End If
+    End Sub
+
+    Private Sub TuesdayButtons_Click(sender As System.Object, e As System.EventArgs) Handles Tuesday.Click, Tuesday1.Click, Tuesday2.Click, Tuesday3.Click, Tuesday4.Click, Tuesday5.Click, Tuesday6.Click
+        Dim day, year, month As Integer
+        Dim mName As String
+        Dim dateClicked As String
+        mName = MonthName.Text
+        year = Val(YearNumber.Text)
+        day = Val(sender.text)
+        month = getMonthNumber(mName)
+
+        lstNoticeBoard.Items.Clear()
+        dateClicked = Format(year, "0000") & "-" & Format(month, "00") & "-" & Format(day, "00")
+        cmd = New MySqlCommand("SELECT * FROM tbreservation WHERE ReservationDate='" & dateClicked & "'", connection)
+        reader = cmd.ExecuteReader()
+        If reader.HasRows = True Then
+            reader.Close()
+            cmd = New MySqlCommand("SELECT tbstudent.studentID, tbstudent.LastName, tbstudent.firstname, tbreservation.organization, tbreservation.purpose, tbbuilding.buildingcode, tbrooms.roomcode, tbreservation.Etimein, tbreservation.etimeout FROM tbreservation INNER JOIN tbstudent ON tbreservation.studentid=tbstudent.studentid INNER JOIN tbbuilding ON tbreservation.buildingid=tbbuilding.buildingid INNER JOIN tbrooms ON tbreservation.Roomid=tbrooms.roomid WHERE ReservationDate='" & dateClicked & "'", connection)
+            reader = cmd.ExecuteReader()
+            While reader.Read()
+                lstNoticeBoard.Items.Add("Student ID: " & reader(0).ToString)
+                lstNoticeBoard.Items.Add("Student Name: " & reader(1).ToString & ", " & reader(2).ToString)
+                lstNoticeBoard.Items.Add("Event/Org.: " & reader(3).ToString)
+                lstNoticeBoard.Items.Add("Purpose: " & reader(4).ToString)
+                lstNoticeBoard.Items.Add("Room: " & reader(5).ToString & " " & reader(6).ToString)
+                lstNoticeBoard.Items.Add("Time-In: " & reader(7).ToString)
+                lstNoticeBoard.Items.Add("Time-Out: " & reader(8).ToString)
+                lstNoticeBoard.Items.Add("---------------------------------------")
+            End While
+            reader.Close()
+        Else
+            reader.Close()
+            lstNoticeBoard.Items.Add("No Reservation!")
+        End If
+    End Sub
+
+    Private Sub WednesdayButtons_Click(sender As System.Object, e As System.EventArgs) Handles Wednesday.Click, Wednesday1.Click, Wednesday2.Click, Wednesday3.Click, Wednesday4.Click, Wednesday5.Click, Wednesday6.Click
+        Dim day, year, month As Integer
+        Dim mName As String
+        Dim dateClicked As String
+        mName = MonthName.Text
+        year = Val(YearNumber.Text)
+        day = Val(sender.text)
+        month = getMonthNumber(mName)
+
+        lstNoticeBoard.Items.Clear()
+        dateClicked = Format(year, "0000") & "-" & Format(month, "00") & "-" & Format(day, "00")
+        cmd = New MySqlCommand("SELECT * FROM tbreservation WHERE ReservationDate='" & dateClicked & "'", connection)
+        reader = cmd.ExecuteReader()
+        If reader.HasRows = True Then
+            reader.Close()
+            cmd = New MySqlCommand("SELECT tbstudent.studentID, tbstudent.LastName, tbstudent.firstname, tbreservation.organization, tbreservation.purpose, tbbuilding.buildingcode, tbrooms.roomcode, tbreservation.Etimein, tbreservation.etimeout FROM tbreservation INNER JOIN tbstudent ON tbreservation.studentid=tbstudent.studentid INNER JOIN tbbuilding ON tbreservation.buildingid=tbbuilding.buildingid INNER JOIN tbrooms ON tbreservation.Roomid=tbrooms.roomid WHERE ReservationDate='" & dateClicked & "'", connection)
+            reader = cmd.ExecuteReader()
+            While reader.Read()
+                lstNoticeBoard.Items.Add("Student ID: " & reader(0).ToString)
+                lstNoticeBoard.Items.Add("Student Name: " & reader(1).ToString & ", " & reader(2).ToString)
+                lstNoticeBoard.Items.Add("Event/Org.: " & reader(3).ToString)
+                lstNoticeBoard.Items.Add("Purpose: " & reader(4).ToString)
+                lstNoticeBoard.Items.Add("Room: " & reader(5).ToString & " " & reader(6).ToString)
+                lstNoticeBoard.Items.Add("Time-In: " & reader(7).ToString)
+                lstNoticeBoard.Items.Add("Time-Out: " & reader(8).ToString)
+                lstNoticeBoard.Items.Add("---------------------------------------")
+            End While
+            reader.Close()
+        Else
+            reader.Close()
+            lstNoticeBoard.Items.Add("No Reservation!")
+        End If
+    End Sub
+
+    Private Sub ThursdayButtons_Click(sender As System.Object, e As System.EventArgs) Handles Thursday.Click, Thursday1.Click, Thursday2.Click, Thursday3.Click, Thursday4.Click, Thursday5.Click, Thursday6.Click
+        Dim day, year, month As Integer
+        Dim mName As String
+        Dim dateClicked As String
+        mName = MonthName.Text
+        year = Val(YearNumber.Text)
+        day = Val(sender.text)
+        month = getMonthNumber(mName)
+
+        lstNoticeBoard.Items.Clear()
+        dateClicked = Format(year, "0000") & "-" & Format(month, "00") & "-" & Format(day, "00")
+        cmd = New MySqlCommand("SELECT * FROM tbreservation WHERE ReservationDate='" & dateClicked & "'", connection)
+        reader = cmd.ExecuteReader()
+        If reader.HasRows = True Then
+            reader.Close()
+            cmd = New MySqlCommand("SELECT tbstudent.studentID, tbstudent.LastName, tbstudent.firstname, tbreservation.organization, tbreservation.purpose, tbbuilding.buildingcode, tbrooms.roomcode, tbreservation.Etimein, tbreservation.etimeout FROM tbreservation INNER JOIN tbstudent ON tbreservation.studentid=tbstudent.studentid INNER JOIN tbbuilding ON tbreservation.buildingid=tbbuilding.buildingid INNER JOIN tbrooms ON tbreservation.Roomid=tbrooms.roomid WHERE ReservationDate='" & dateClicked & "'", connection)
+            reader = cmd.ExecuteReader()
+            While reader.Read()
+                lstNoticeBoard.Items.Add("Student ID: " & reader(0).ToString)
+                lstNoticeBoard.Items.Add("Student Name: " & reader(1).ToString & ", " & reader(2).ToString)
+                lstNoticeBoard.Items.Add("Event/Org.: " & reader(3).ToString)
+                lstNoticeBoard.Items.Add("Purpose: " & reader(4).ToString)
+                lstNoticeBoard.Items.Add("Room: " & reader(5).ToString & " " & reader(6).ToString)
+                lstNoticeBoard.Items.Add("Time-In: " & reader(7).ToString)
+                lstNoticeBoard.Items.Add("Time-Out: " & reader(8).ToString)
+                lstNoticeBoard.Items.Add("---------------------------------------")
+            End While
+            reader.Close()
+        Else
+            reader.Close()
+            lstNoticeBoard.Items.Add("No Reservation!")
+        End If
+    End Sub
+
+    Private Sub FridayButtons_Click(sender As System.Object, e As System.EventArgs) Handles Friday.Click, Friday1.Click, Friday2.Click, Friday3.Click, Friday4.Click, Friday5.Click, Friday6.Click
+        Dim day, year, month As Integer
+        Dim mName As String
+        Dim dateClicked As String
+        mName = MonthName.Text
+        year = Val(YearNumber.Text)
+        day = Val(sender.text)
+        month = getMonthNumber(mName)
+
+        lstNoticeBoard.Items.Clear()
+        dateClicked = Format(year, "0000") & "-" & Format(month, "00") & "-" & Format(day, "00")
+        cmd = New MySqlCommand("SELECT * FROM tbreservation WHERE ReservationDate='" & dateClicked & "'", connection)
+        reader = cmd.ExecuteReader()
+        If reader.HasRows = True Then
+            reader.Close()
+            cmd = New MySqlCommand("SELECT tbstudent.studentID, tbstudent.LastName, tbstudent.firstname, tbreservation.organization, tbreservation.purpose, tbbuilding.buildingcode, tbrooms.roomcode, tbreservation.Etimein, tbreservation.etimeout FROM tbreservation INNER JOIN tbstudent ON tbreservation.studentid=tbstudent.studentid INNER JOIN tbbuilding ON tbreservation.buildingid=tbbuilding.buildingid INNER JOIN tbrooms ON tbreservation.Roomid=tbrooms.roomid WHERE ReservationDate='" & dateClicked & "'", connection)
+            reader = cmd.ExecuteReader()
+            While reader.Read()
+                lstNoticeBoard.Items.Add("Student ID: " & reader(0).ToString)
+                lstNoticeBoard.Items.Add("Student Name: " & reader(1).ToString & ", " & reader(2).ToString)
+                lstNoticeBoard.Items.Add("Event/Org.: " & reader(3).ToString)
+                lstNoticeBoard.Items.Add("Purpose: " & reader(4).ToString)
+                lstNoticeBoard.Items.Add("Room: " & reader(5).ToString & " " & reader(6).ToString)
+                lstNoticeBoard.Items.Add("Time-In: " & reader(7).ToString)
+                lstNoticeBoard.Items.Add("Time-Out: " & reader(8).ToString)
+                lstNoticeBoard.Items.Add("---------------------------------------")
+            End While
+            reader.Close()
+        Else
+            reader.Close()
+            lstNoticeBoard.Items.Add("No Reservation!")
+        End If
+    End Sub
+
+    Private Sub SaturdayButtons_Click(sender As System.Object, e As System.EventArgs) Handles Saturday.Click, Saturday1.Click, Saturday2.Click, Saturday3.Click, Saturday4.Click, Saturday5.Click, Saturday6.Click
+        Dim day, year, month As Integer
+        Dim mName As String
+        Dim dateClicked As String
+        mName = MonthName.Text
+        year = Val(YearNumber.Text)
+        day = Val(sender.text)
+        month = getMonthNumber(mName)
+
+        lstNoticeBoard.Items.Clear()
+        dateClicked = Format(year, "0000") & "-" & Format(month, "00") & "-" & Format(day, "00")
+        cmd = New MySqlCommand("SELECT * FROM tbreservation WHERE ReservationDate='" & dateClicked & "'", connection)
+        reader = cmd.ExecuteReader()
+        If reader.HasRows = True Then
+            reader.Close()
+            cmd = New MySqlCommand("SELECT tbstudent.studentID, tbstudent.LastName, tbstudent.firstname, tbreservation.organization, tbreservation.purpose, tbbuilding.buildingcode, tbrooms.roomcode, tbreservation.Etimein, tbreservation.etimeout FROM tbreservation INNER JOIN tbstudent ON tbreservation.studentid=tbstudent.studentid INNER JOIN tbbuilding ON tbreservation.buildingid=tbbuilding.buildingid INNER JOIN tbrooms ON tbreservation.Roomid=tbrooms.roomid WHERE ReservationDate='" & dateClicked & "'", connection)
+            reader = cmd.ExecuteReader()
+            While reader.Read()
+                lstNoticeBoard.Items.Add("Student ID: " & reader(0).ToString)
+                lstNoticeBoard.Items.Add("Student Name: " & reader(1).ToString & ", " & reader(2).ToString)
+                lstNoticeBoard.Items.Add("Event/Org.: " & reader(3).ToString)
+                lstNoticeBoard.Items.Add("Purpose: " & reader(4).ToString)
+                lstNoticeBoard.Items.Add("Room: " & reader(5).ToString & " " & reader(6).ToString)
+                lstNoticeBoard.Items.Add("Time-In: " & reader(7).ToString)
+                lstNoticeBoard.Items.Add("Time-Out: " & reader(8).ToString)
+                lstNoticeBoard.Items.Add("---------------------------------------")
+            End While
+            reader.Close()
+        Else
+            reader.Close()
+            lstNoticeBoard.Items.Add("No Reservation!")
+        End If
+    End Sub
+
+    Private Function getMonthNumber(mName As String) As Integer
+        Dim monthNumber As Integer = 0
+
+        If mName = "January" Then
+            monthNumber = 1
+        ElseIf mName = "February" Then
+            monthNumber = 2
+        ElseIf mName = "March" Then
+            monthNumber = 3
+        ElseIf mName = "April" Then
+            monthNumber = 4
+        ElseIf mName = "May" Then
+            monthNumber = 5
+        ElseIf mName = "June" Then
+            monthNumber = 6
+        ElseIf mName = "July" Then
+            monthNumber = 7
+        ElseIf mName = "August" Then
+            monthNumber = 8
+        ElseIf mName = "September" Then
+            monthNumber = 9
+        ElseIf mName = "October" Then
+            monthNumber = 10
+        ElseIf mName = "November" Then
+            monthNumber = 11
+        ElseIf mName = "December" Then
+            monthNumber = 12
+        End If
+
+        Return monthNumber
+    End Function
 End Class
 
 

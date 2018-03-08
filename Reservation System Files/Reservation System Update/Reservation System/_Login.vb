@@ -1,20 +1,46 @@
-﻿Public Class _Login
+﻿Imports MySql.Data.MySqlClient
+Public Class _Login
+    Public userlvl As String
+
+    Dim conn As New MySqlConnection
+    Dim reader As MySqlDataReader
     Dim user As String
 
     Private Sub OK_Click(sender As System.Object, e As System.EventArgs) Handles OK.Click
 
-        'CLARK CONNECT THIS SA DATABASE PLOX!!
-        '' the user must be sa database magbase 
-        ''AJA GOODLUCK 
-        If user = "admin" Then
-            Me.Hide()
-            Admin_home.Show()
-        ElseIf user = "user" Then
-            Me.Hide()
-            home_form.Show()
+        conn.ConnectionString = String.Format("server=localhost; user id=root; password=baba; database=dbusers")
+        conn.Open()
+
+
+        Dim cmd As New MySqlCommand("Select Password From tbusers where Username LIKE '" & UsernameTextBox.Text & "'", conn)
+
+        reader = cmd.ExecuteReader()
+        reader.Read()
+
+        If reader.HasRows() Then
+
+            If PasswordTextBox.Text = reader(0).ToString Then
+
+                If user = "admin" Or user = "ADMIN" Then
+                    userlvl = "ADMIN"
+                    Me.Hide()
+                    Admin_home.Show()
+                ElseIf user = "ppo" Or user = "PPO" Or user = "osa" Or user = "OSA" Then
+                    userlvl = "USER"
+                    Me.Hide()
+                    home_form.Show()
+                End If
+
+            Else
+                MsgBox("Incorrect Password.")
+            End If
         Else
-            MsgBox("Error")
+            MsgBox("Incorrect Username")
         End If
+
+
+        reader.Close()
+        conn.Close()
     End Sub
 
     Private Sub UsernameTextBox_TextChanged(sender As System.Object, e As System.EventArgs) Handles UsernameTextBox.TextChanged
@@ -33,7 +59,3 @@
 
     End Sub
 End Class
-
-'' YOURE LOWKEY DOING EVERYTHING ERRTHING SO GOODLUCK XD 
-'' WE MUST FINISH THIS TILL THURSDAY 
-'' MUST FINIIIIIISHH!!!
